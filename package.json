@@ -1,8 +1,9 @@
 {
   "name": "coffee-proxy-server",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "dev-sever",
   "main": "build/index.js",
+  "repository": "https://github.com/wangchaoyi/coffee-proxy-server.git",
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc"

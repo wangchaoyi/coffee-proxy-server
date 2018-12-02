@@ -8,9 +8,9 @@
 因为有些旧版本的vue-cli无法生效。 或者有些非vue或者react的项目也想要在开发过程中使用反向代理。
 
 ### 如何使用？
-#### 使用npm
+##### 使用npm
 `npm install -g coffee-proxy-server`
-#### 使用yarn
+##### 使用yarn
 `yarn global add coffee-proxy-server`
 
 安装完成之后， 系统命令会多一个`coffeeProxy`
@@ -19,17 +19,17 @@
 目前暂只支持在项目下加入**coffee-proxy-config.js**，后续会考虑自定义路径
 
 **coffee-proxy-config.js** 示例：
-``` javascript
+```  javascript
 module.exports = {
   "port": 9000,
-	"options": {
+  "options": {
     "/v2/api": {
-       "target": "http://api-server-example.xxx",
-		 "changeOrigin": true
-    }, // 匹配api路径以及转发域名
-	   "/": {
-       "target": "http://localhost:8080",
-		 "changeOrigin": false
+      "target": "http://api-server-example.xxx",
+      "changeOrigin": true
+    },// 匹配api路径以及转发域名
+    "/": {
+      "target": "http://localhost:8080",
+      "changeOrigin": false
     } // 本地前端开发服务器
   }
 };
