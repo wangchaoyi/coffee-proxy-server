@@ -36,7 +36,7 @@ jobs:
         run: |
           zip --junk-paths my-artifact README.md
       - name: Create Release Assets
-        id: create_release assets
+        id: create_release_assets
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
